@@ -1,0 +1,6 @@
+@import "../helpers/mixins";
+
+@include font("Montserrat", normal, 400, "#{$pathFont}/Montserrat-Regular.woff2");
+@include font("Montserrat-Bold", normal, 700, "#{$pathFont}/Montserrat-Bold.woff2");
+@include font("Montserrat-Medium", normal, 500, "#{$pathFont}/Montserrat-Medium.woff2");
+@include font("NunitoSans", normal, 400, "#{$pathFont}/NunitoSans-Regular.woff2");
