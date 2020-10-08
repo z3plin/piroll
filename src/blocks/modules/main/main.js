@@ -1,13 +1,8 @@
-modules.define('main', ['i-bem-dom'], function(provide, bemDom) {
+import AOS from "aos";
 
-provide(bemDom.declBlock(this.name, {
-    onSetMod: {
-        js: {
-            inited: function() {
-                
-            }
-        }
-    }
-}));
-
+AOS.init({
+    offset: 200,
+    duration: 1200,
+    delay: 100,
+    once: true
 });
