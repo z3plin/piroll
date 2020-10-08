@@ -1,0 +1,29 @@
+.about {
+    &__wrapper {
+        @extend .flex;
+        @extend .max-width;
+        height: 100vh;
+    }
+
+    &__content {
+        width: calc(100% / 12 * 7);
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    &__contentTitle {
+        font-size: rem(30);
+        color: $codGray;
+    }
+
+    &__contentText {
+        font-size: rem(16);
+    }
+
+    &__contentImg {
+        max-width: rem(250);
+        max-height: rem(150);
+        margin: 0 auto;
+        padding: 0;
+    }
+}

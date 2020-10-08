@@ -1,0 +1,79 @@
+.skills {
+    background-color: $blackHaze;
+    background-image: linear-gradient(90deg, $blackHaze 0%, $blackHaze 50%, $relax 51%, $relax 100%);
+
+    &__wrapper {
+        @extend .flex;
+        @extend .max-width;
+        max-height: rem(570);
+        overflow: hidden;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: calc(100% / 12 * 6);
+        padding-right: rem(60);
+        background-color: $blackHaze;
+
+        &Title {
+            margin-bottom: rem(40);
+        }
+
+        &Item {
+            margin-bottom: rem(40);
+            font-family: "Montserrat-Medium", Arial, Helvetica, sans-serif;
+            font-size: rem(14);
+            font-weight: 500;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__img {
+        @extend .flex;
+        justify-content: center;
+        width: calc(100% / 12 * 6);
+        background-color: $relax;
+    }
+}
+
+.progressBar {
+    display: block;
+    position: relative;
+    height: rem(5);
+    margin-top: rem(10);
+    background-color: $progressBar;
+    border-radius: 10px;
+    overflow: hidden;
+
+    &__indicator {
+        height: 100%;
+        font-family: "NunitoSans", Arial, Helvetica, sans-serif;
+        font-size: rem(12);
+        font-weight: 400;
+        text-align: center;
+        background-color: $java;
+        white-space: nowrap;
+        overflow: hidden;
+        transition: 400ms width, 400ms background-color;
+        user-select: none;
+    }
+
+    .indicator__90 {
+        width: 90%;
+    }
+
+    .indicator__75 {
+        width: 75%;
+    }
+
+    .indicator__65 {
+        width: 65%;
+    }
+}

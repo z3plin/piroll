@@ -84,3 +84,23 @@ svg {
     max-width: rem(1170);
     margin: 0 auto;
 }
+
+.mx-20 {
+    margin-left: rem(20);
+}
+
+.title {
+    font-family: "Montserrat-Medium";
+    font-size: rem(38);
+    font-weight: 500;
+    color: #1d1d1d;
+    letter-spacing: 0.38px;
+}
+
+.text {
+    font-size: rem(18);
+    font-weight: 400;
+    line-height: rem(28);
+    color: $boulder;
+    letter-spacing: 0.09px;
+}
