@@ -8,7 +8,7 @@ const options = {
 
 let countsSection = document.getElementById('counts');
 
-window.addEventListener('scroll', function() { 
+window.addEventListener('focusin', function() { 
     isScrolledIntoView(countsSection);
     let projects = new CountUp('countProjects', 548, options);
     let hours = new CountUp('countHours', 1465, options);
