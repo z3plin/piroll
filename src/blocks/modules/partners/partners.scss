@@ -1,0 +1,30 @@
+.partners {
+    &__wrapper {
+        @extend .max-width;
+        @extend .flex;
+        padding: rem(50) 0;
+    }
+
+    .partner {
+        width: calc(100% / 12 * 3 - 15px);
+        @media screen and (max-width: 768px) {
+            width: calc(100% / 12 * 6 - 15px);
+        }
+
+        &__link {
+            @extend .flex;
+            justify-content: center;
+            width: 100%;
+            transition: .3s all;
+
+            &:hover {
+                animation: flip 1.5s both;
+            }
+            
+            img {
+                max-width: rem(200);
+                max-height: rem(200);
+            }
+        }
+    }
+}
