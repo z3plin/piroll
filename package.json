@@ -71,10 +71,10 @@
         "yargs": "^15.4.1"
     },
     "dependencies": {
-        "@splidejs/splide": "^2.4.14",
         "aos": "^2.3.4",
         "countup.js": "^2.0.7",
-        "smart-grid": "^2.1.2"
+        "smart-grid": "^2.1.2",
+        "swiper": "^6.3.3"
     },
     "husky": {
         "hooks": {

@@ -1,0 +1,58 @@
+.reviews {
+    position: relative;
+    padding: rem(100) 0;
+    background-color: $java;
+    overflow: hidden;
+
+    &__wrapper {
+        @extend .max-width;
+        
+        .swiperSlider__wrapper {
+            width: calc(100% / 12 * 8);
+            position: relative;
+            margin: 0 auto;
+        }
+    }
+}
+
+.review__text {
+    font-family: "Montserrat-Medium", Arial, Helvetica, sans-serif;
+    font-size: rem(30);
+    font-weight: 500;
+    line-height: 120%;
+    color: $white;
+    letter-spacing: 0.08px;
+}
+
+.review__author {
+    font-family: "Montserrat-Medium", Arial, Helvetica, sans-serif;
+    font-size: rem(14);
+    font-weight: 500;
+    line-height: 300%;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: $white;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    @extend .flex;
+    flex-direction: column;
+    font-size: 18px;
+    text-align: center;
+}
+
+.swiper-pagination {
+    position: absolute;
+    bottom: -35%!important;
+}
+
+.swiper-pagination-bullet {
+    width: rem(13);
+    height: rem(13);
+    background-color: $white;
+}

@@ -1,4 +1,6 @@
 @import "import/normalize";
 @import "import/smart-grid";
 @import "../../../node_modules/aos/dist/aos";
-@import "../../../node_modules/@splidejs/splide/dist/css/splide.min.css";
+@import "../../../node_modules/swiper/swiper.scss";
+@import "../../../node_modules/swiper/components/pagination/pagination.scss";
+@import "../../../node_modules/swiper/components/effect-flip/effect-flip.scss";
