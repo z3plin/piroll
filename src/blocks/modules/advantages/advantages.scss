@@ -1,0 +1,47 @@
+.advantages {
+    background-color: $wildSand;
+
+    &__wrapper {
+        @extend .max-width;
+        padding: rem(100) 0 rem(80);
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        padding: rem(0) rem(15);
+    }
+
+    &__item {
+        @extend .flex;
+        flex-direction: column;
+        width: calc(100% / 12 * 3 - 15px);
+        margin: 0 auto;
+        margin-bottom: rem(20);
+        text-align: center;
+        @media screen and (max-width: 768px) {
+            width: calc(100% / 12 * 6 - 15px);
+        }
+
+        &Logo {
+            margin-bottom: rem(20);
+            font-size: rem(48);
+            color: $doveGray;
+        }
+
+        &Title {
+            font-family: "Montserrat-Medium", Arial, Helvetica, sans-serif;
+            font-size: rem(14);
+            font-weight: 500;
+            text-transform: uppercase;
+            color: $codGray;
+            letter-spacing: 1.2px;
+        }
+
+        &Text {
+            letter-spacing: 0.08px;
+            color: $boulder;
+        }
+    }
+}

@@ -1,0 +1,89 @@
+.workProcess {
+    &__wrapper {
+        @extend .max-width;
+        margin: rem(100) auto;
+    }
+
+    &__title,
+    &__text {
+        text-align: center;
+    }
+
+    &__title {
+        font-size: rem(30);
+    }
+
+    &__text {
+        width: calc(100% / 12 * 6);
+        margin: 0 auto;
+        margin-top: rem(20);
+        margin-bottom: rem(50);
+        font-size: rem(16);
+        line-height: rem(24);
+        letter-spacing: 0.08px;
+    }
+
+    &__videoWrapper {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: relative;
+        overflow: hidden;
+
+        .video__buttonArea {
+            @extend .flex;
+            justify-content: center;
+            width: rem(85);
+            height: rem(85);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            color: $white;
+            background-color: $java;
+            border: none;
+            border-radius: 50%;
+            outline: none;
+            transform: translate(-50%, -50%);
+            transition: .2s all ease-in-out;
+
+            &:focus {
+                background-color: darken($color: $java, $amount: 10%);
+                border: 2px solid $white;
+            }
+            
+            &:active {
+                transform: translate(-50%, -50%) scale(.90);
+            }
+
+            .video__button {
+                font-size: rem(24);
+                transform: translateX(15%);
+            }
+        }
+
+        .video__modal {
+            display: none;
+            visibility: hidden;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    .modalOverlay {
+        width: 100%;
+        height: 100vh;
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba($color: $black, $alpha: 0.5);
+        opacity: 0;
+        z-index: 10;
+    }
+}
