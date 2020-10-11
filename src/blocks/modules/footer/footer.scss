@@ -1,0 +1,128 @@
+.pageFooter {
+    background-color: $footerBg;
+}
+
+.footer {
+    &__wrapper {
+        @extend .flex;
+        @extend .max-width;
+        align-items: stretch;
+        padding: rem(80) 0;
+        color: $white;
+    }
+
+    &__copy,
+    &__contacts,
+    &__menu {
+        margin: 0;
+        padding: 0;
+        letter-spacing: 0.075px;
+    }
+
+    &__copy {
+        width: calc(100% / 12 * 4);
+    }
+    
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        width: calc(100% / 12 * 3);
+    }
+
+    &__menu {
+        @extend .flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        width: calc(100% / 12 * 3);
+        
+        &Item {
+            width: calc(100% / 12 * 6);
+        }
+
+        &Link {
+            width: fit-content;
+            display: block;
+            margin: 0;
+            padding: 0;
+            color: $silver;
+            transition: .3s all;
+
+            &:hover {
+                color: $java;
+            }
+        
+            &:focus {
+                color: $java;
+            }
+        
+            &:active {
+                color: darken($color: $java, $amount: 10%);
+            }
+        }
+    }
+
+    &__socials {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: calc(100% / 12 * 1);
+
+        .socials__item {
+            width: 100%;
+            display: block;
+        }
+
+        .socials__link {
+            display: block;
+            width: fit-content;
+            color: $silver;
+
+            &:hover {
+                color: $java;
+            }
+        
+            &:focus {
+                color: $java;
+            }
+        
+            &:active {
+                color: darken($color: $java, $amount: 10%);
+            }
+        }
+    }
+}
+
+.copy__title {
+    display: inline-block;
+    margin-bottom: rem(20);
+    font-family: "Montserrat-Medium", Arial, Helvetica, sans-serif;
+    font-size: rem(30);
+    font-weight: 500;
+    letter-spacing: 0.18px;
+}
+
+.copy__text {
+    font-size: rem(16);
+    line-height: 150%;
+    color: $silver;
+}
+
+.contacts__email,
+.contacts__phone {
+    width: fit-content;
+    line-height: 160%;
+    color: $silver;
+    transition: .3s all;
+
+    &:hover {
+        color: $java;
+    }
+
+    &:focus {
+        color: $java;
+    }
+
+    &:active {
+        color: darken($color: $java, $amount: 10%);
+    }
+}

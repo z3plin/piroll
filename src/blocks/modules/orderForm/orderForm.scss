@@ -1,0 +1,91 @@
+.orderForm {
+    background-color: $wildSand;
+
+    &__wrapper {
+        @extend .max-width;
+        padding: rem(100) 0;
+    }
+
+    &__title,
+    &__text {
+        text-align: center;
+    }
+
+    &__title {
+        font-size: rem(30);
+    }
+
+    &__text {
+        width: calc(100% / 12 * 6);
+        margin: rem(20) auto 0;
+    }
+}
+
+.order__form {
+    max-width: rem(700);
+    margin: rem(35) auto 0;
+
+    .form {
+        &__fieldset {
+            @extend .flex;
+            margin-bottom: rem(25);
+            padding: 0;
+            border: none;
+            outline: none;
+        }
+
+        &__legend {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 0;
+            line-height: 0;
+            border: none;
+            outline: 0;
+        }
+
+        &__input {
+            width: calc(100% / 12 * 6 - 15px);
+            display: inline-block;
+            padding: rem(15) rem(20);
+            font-size: rem(15);
+            letter-spacing: 0.15px;
+            color: $boulder;
+            background-color: $white;
+            border: none;
+            border-radius: 3px;
+            outline: none;
+        }
+
+
+        &__input::placeholder {
+            font-size: rem(15);
+            color: $boulder;
+        }
+
+        &__title {
+            width: 100%;
+        }
+
+        &__textarea {
+            width: 100%;
+            min-height: rem(170);
+            padding: rem(15) rem(20);
+            font-size: rem(15);
+            letter-spacing: 0.15px;
+            color: $boulder;
+            background-color: $white;
+            border: none;
+            border-radius: 3px;
+            outline: none;
+            resize: none;
+            box-sizing: border-box;
+        }
+
+        &__btn {
+            margin: 0 auto;
+            border: none;
+        }
+    }
+}
