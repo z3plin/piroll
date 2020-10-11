@@ -4,6 +4,9 @@
     &__wrapper {
         @extend .max-width;
         padding: rem(100) 0 rem(80);
+        @media screen and (max-width: 768px) {
+            padding: rem(60) 0 rem(20);
+        }
     }
 
     &__list {

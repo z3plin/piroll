@@ -9,6 +9,15 @@
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     overflow: hidden;
 
+    @media screen and (max-width: 768px) {
+        grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    @media screen and (max-width: 576px) {
+        grid-template-rows: repeat(auto-fill, minmax(180px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+
     &Item {
         position: relative;
     }

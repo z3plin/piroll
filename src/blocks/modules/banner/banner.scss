@@ -9,15 +9,37 @@
 
 .banner__wrapper {
     @extend .max-width;
+
+    @media screen and (max-width: 576px) {
+        height: 100vh;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-around;
+    }
 }
 
 .banner__content {
-    width: calc(100% / 12 * 5);
+    width: calc(100% / 12 * 6);
     max-height: rem(630);
     margin-left: auto;
-    margin-right: rem(30);
+
+    @media screen and (max-width: 992px) {
+        width: calc(100% / 12 * 7); 
+    }
+
+    @media screen and (max-width: 768px) {
+        width: calc(100% / 12 * 8);
+    }
+
+    @media screen and (max-width: 576px) {
+        width: calc(100% / 12 * 12);
+    }
 
     &Text {
         margin-top: rem(15);
+
+        @media screen and (max-width: 576px) {
+            color: $java;
+        }
     }
 }

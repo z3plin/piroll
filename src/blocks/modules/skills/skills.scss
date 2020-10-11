@@ -1,12 +1,21 @@
 .skills {
     background-color: $blackHaze;
     background-image: linear-gradient(90deg, $blackHaze 0%, $blackHaze 50%, $relax 51%, $relax 100%);
+    @media screen and (max-width: 576px) {
+        padding: rem(30) 0;
+        background-color: $blackHaze;
+        background-image: none;
+    }
 
     &__wrapper {
         @extend .flex;
         @extend .max-width;
         max-height: rem(570);
         overflow: hidden;
+
+        @media screen and (max-width: 576px) {
+            flex-direction: column;
+        }
     }
 
     &__content {
@@ -16,6 +25,11 @@
         width: calc(100% / 12 * 6);
         padding-right: rem(60);
         background-color: $blackHaze;
+
+        @media screen and (max-width: 576px) {
+            width: calc(100% / 12 * 12);
+            padding: 0;
+        }
 
         &Title {
             margin-bottom: rem(40);
@@ -32,6 +46,10 @@
             &:last-child {
                 margin-bottom: 0;
             }
+
+            @media screen and (max-width: 576px) {
+                font-size: rem(12);
+            }
         }
     }
 
@@ -40,6 +58,11 @@
         justify-content: center;
         width: calc(100% / 12 * 6);
         background-color: $relax;
+
+        @media screen and (max-width: 576px) {
+            width: calc(100% / 12 * 12);
+            margin-top: rem(20);
+        }
     }
 }
 

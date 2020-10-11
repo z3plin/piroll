@@ -2,6 +2,10 @@
     &__wrapper {
         @extend .max-width;
         margin: rem(100) auto;
+
+        @media screen and (max-width: 768px) {
+            margin: rem(60) auto;
+        }
     }
 
     &__title,
@@ -21,6 +25,9 @@
         font-size: rem(16);
         line-height: rem(24);
         letter-spacing: 0.08px;
+        @media screen and (max-width: 768px) {
+            width: calc(100% / 12 * 10);
+        }
     }
 
     &__videoWrapper {

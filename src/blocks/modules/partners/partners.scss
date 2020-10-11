@@ -2,13 +2,18 @@
     &__wrapper {
         @extend .max-width;
         @extend .flex;
+        flex-wrap: wrap;
         padding: rem(50) 0;
+        @media screen and (max-width: 768px) {
+            padding-bottom: rem(30);
+        }
     }
 
     .partner {
         width: calc(100% / 12 * 3 - 15px);
         @media screen and (max-width: 768px) {
             width: calc(100% / 12 * 6 - 15px);
+            margin-bottom: rem(20);
         }
 
         &__link {
@@ -19,11 +24,18 @@
 
             &:hover {
                 animation: flip 1.5s both;
+                @media screen and (max-width: 768px) {
+                    animation: none;
+                }
             }
             
             img {
                 max-width: rem(200);
                 max-height: rem(200);
+                @media screen and (max-width:576px) {
+                    max-width: rem(150);
+                    max-height: rem(150);
+                }
             }
         }
     }

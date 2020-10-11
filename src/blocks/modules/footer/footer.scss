@@ -1,11 +1,13 @@
 .pageFooter {
     background-color: $footerBg;
+    overflow: hidden;
 }
 
 .footer {
     &__wrapper {
         @extend .flex;
         @extend .max-width;
+        flex-wrap: wrap;
         align-items: stretch;
         padding: rem(80) 0;
         color: $white;
@@ -21,12 +23,36 @@
 
     &__copy {
         width: calc(100% / 12 * 4);
+        order: 1;
+
+        @media screen and (max-width: 768px) {
+            width: calc(100% / 12 * 6);
+        }
+
+        @media screen and (max-width: 576px) {
+            width: calc(100% / 12 * 12);
+            margin-bottom: rem(20);
+            text-align: center;
+        }
     }
     
     &__contacts {
         display: flex;
         flex-direction: column;
         width: calc(100% / 12 * 3);
+        order: 2;
+
+        @media screen and (max-width: 768px) {
+            width: calc(100% / 12 * 6);
+            order: 3;
+        }
+
+        @media screen and (max-width: 576px) {
+            width: calc(100% / 12 * 12);
+            align-items: center;
+            margin-bottom: rem(20);
+            order: 2;
+        }
     }
 
     &__menu {
@@ -34,9 +60,24 @@
         flex-wrap: wrap;
         align-items: stretch;
         width: calc(100% / 12 * 3);
+        order: 3;
+
+        @media screen and (max-width: 768px) {
+            width: calc(100% / 12 * 6);
+            order: 2;
+        }
+
+        @media screen and (max-width: 576px) {
+            width: calc(100% / 12 * 12);
+            margin-bottom: rem(20);
+            order: 3;
+        }
         
         &Item {
             width: calc(100% / 12 * 6);
+            @media screen and (max-width: 576px) {
+                width: calc(100% / 12 * 3);
+            }
         }
 
         &Link {
@@ -46,6 +87,11 @@
             padding: 0;
             color: $silver;
             transition: .3s all;
+
+            @media screen and (max-width: 576px) {
+                margin: 0 auto;
+                margin-bottom: rem(20);
+            }
 
             &:hover {
                 color: $java;
@@ -66,16 +112,37 @@
         flex-wrap: wrap;
         justify-content: space-between;
         width: calc(100% / 12 * 1);
+        order: 4;
+
+        @media screen and (max-width: 768px) {
+            width: calc(100% / 12 * 6);
+        }
+
+        @media screen and (max-width: 576px) {
+            width: calc(100% / 12 * 12);
+        }
 
         .socials__item {
             width: 100%;
             display: block;
+
+            @media screen and (max-width: 768px) {
+                width: calc(100% / 12 * 6);
+            }
+
+            @media screen and (max-width: 576px) {
+                width: calc(100% / 12 * 3);
+            }
         }
 
         .socials__link {
             display: block;
             width: fit-content;
             color: $silver;
+
+            @media screen and (max-width: 576px) {
+                margin: 0 auto;
+            }
 
             &:hover {
                 color: $java;

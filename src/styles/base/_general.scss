@@ -83,6 +83,8 @@ svg {
 .max-width {
     max-width: rem(1170);
     margin: 0 auto;
+    padding-right: rem(15)!important;
+    padding-left: rem(15)!important;
 }
 
 .mx-20 {
@@ -95,6 +97,17 @@ svg {
     font-weight: 500;
     color: #1d1d1d;
     letter-spacing: 0.38px;
+
+    @media screen and (max-width: 992px) {
+      font-size: rem(34);
+    }
+    @media screen and (max-width: 768px) {
+      font-size: rem(30);
+    }
+    @media screen and (max-width: 576px) {
+      font-size: rem(26);
+      text-align: center;
+    }
 }
 
 .text {
@@ -103,6 +116,10 @@ svg {
     line-height: rem(28);
     color: $boulder;
     letter-spacing: 0.09px;
+
+    @media screen and (max-width: 768px) {
+      font-size: rem(16);
+    }
 }
 
 @keyframes flip {

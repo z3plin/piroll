@@ -9,6 +9,10 @@
         width: calc(100% / 12 * 7);
         margin: 0 auto;
         text-align: center;
+
+        @media screen and (max-width: 576px) {
+            width: calc(100% / 12 * 11);
+        }
     }
 
     &__contentTitle {
