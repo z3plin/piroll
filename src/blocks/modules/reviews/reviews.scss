@@ -4,6 +4,16 @@
     background-color: $java;
     overflow: hidden;
 
+    @media screen and (max-width: 768px) {
+        padding: rem(60) 0;
+    }
+    @media screen and (max-width: 576px) {
+        padding: rem(40) 0 rem(60);
+    }
+    @media screen and (max-width: 992px) and (orientation: landscape) {
+        padding: rem(60) 0;
+    }
+
     &__wrapper {
         @extend .max-width;
         
@@ -11,6 +21,13 @@
             width: calc(100% / 12 * 8);
             position: relative;
             margin: 0 auto;
+
+            @media screen and (max-width: 768px) {
+                width: calc(100% / 12 * 12);
+            }
+            @media screen and (max-width: 992px) and (orientation: landscape) {
+                width: calc(100% / 12 * 10);
+            }
         }
     }
 }
@@ -22,6 +39,17 @@
     line-height: 120%;
     color: $white;
     letter-spacing: 0.08px;
+    
+    @media screen and (max-width: 768px) {
+        font-size: rem(24);
+    }
+    @media screen and (max-width: 576px) {
+        font-size: rem(20);
+    }
+
+    @media screen and (max-width: 992px) and (orientation: landscape) {
+        font-size: rem(22);
+    }
 }
 
 .review__author {
@@ -49,6 +77,10 @@
 .swiper-pagination {
     position: absolute;
     bottom: -10%!important;
+
+    @media screen and (max-width:576px) {
+        bottom: -5%!important;
+    }
 }
 
 .swiper-pagination-bullet {

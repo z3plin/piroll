@@ -1,8 +1,13 @@
 .pageHeader {
-    position: absolute;
     width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     margin: 0 auto;
     background-color: rgba($color: $white, $alpha: 0.2);
+    z-index: 2;
+    transition: all 0.4s;
 }
 
 .header__wrapper {
@@ -26,7 +31,7 @@
 
 .header__menu {
     width: calc(100% / 12 * 8);
-    font-family: "Montserrat-Medium";
+    font-family: "Montserrat-Medium", Arial, Helvetica, sans-serif;
     font-size: rem(14);
     font-weight: 500;
     text-transform: uppercase;
@@ -74,6 +79,7 @@
         justify-content: space-around;
         align-items: center;
         margin-left: auto;
+        padding-bottom: rem(60);
     }
 
     &-link {
@@ -158,8 +164,17 @@
     li.fade {
         opacity: 1;
     }
+
 }
 
+.scroll-down .pageHeader {
+    transform: translate3d(0, -100%, 0);
+}
+
+.scroll-up .pageHeader {
+    background-color: rgba($color: $relax, $alpha: 0.7);
+    transform: none;
+}
 @keyframes slide-in-fwd-tl {
     0% {
         transform: translate(-1000px, -1000px) skew(80deg, 10deg);
