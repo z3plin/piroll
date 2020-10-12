@@ -60,7 +60,6 @@
 .mobile__menu {
     display: none;
     position: relative;
-    background: $powderBlue;
     opacity: 0;
     visibility: hidden;
     z-index: 10;
@@ -95,27 +94,92 @@
             color: $java;
         }
     }
-
-    .line {
-        width: 30px;
-        height: 3px;
-        margin: 5px;
-        background: $codGray;
-        border-radius: 5px;
-    }
-
+    
     .hamburger {
+        width: 30px;
+        height: 25px;
         position: absolute;
         top: 0;
-        right: 5%;
-        transform: translate(-5%, -50%);
+        right: 50%;
+        margin: 0 auto;
         z-index: 20;
-        cursor: pointer;
+        transform: translate(-50%, -50%);
+
+        & .bar {
+            width: 30px;
+            height: 3px;
+            position: absolute; 
+            display: block;
+            padding: 0;
+            background-color: $codGray;
+            border-radius: 4px;
+            transition: all 0.6s ease-in-out;
+        }
+
+        & .bar1 {
+            top: 0;
+            transform-origin: 5%;
+        }
+        
+        & .bar2,
+        & .bar3 {
+            top: 10.5px;
+        }
+        
+        & .bar3 {
+            right: 0;
+        }
+        
+        & .bar4 {
+            bottom: 0;
+            transform-origin: 5%;
+        }
     }
 
-    .hamburger-open .line {
-        background: $codGray;
+    .checkbox3:checked + label > .hamburger3 > .bar1{
+        transform: rotate(45deg);
+        height: 3px;
+        width: 34px;
     }
+    
+    .checkbox3:checked + label > .hamburger3 > .bar3{
+        transform: rotate(45deg);
+        height: 3px;
+        background-color: transparent;
+    }
+    
+    .checkbox3:checked + label > .hamburger3 > .bar2{
+        transform: rotate(-45deg);
+        height: 3px;
+        background-color: transparent;
+    }
+    
+    .checkbox3:checked + label > .hamburger3 > .bar4{
+        transform: rotate(-45deg);
+        height: 3px;
+        width: 34px;
+    }
+
+    // .line {
+    //     width: 30px;
+    //     height: 3px;
+    //     margin: 5px;
+    //     background: $codGray;
+    //     border-radius: 5px;
+    // }
+
+    // .hamburger {
+    //     position: absolute;
+    //     top: 0;
+    //     right: 5%;
+    //     transform: translate(-5%, -50%);
+    //     z-index: 20;
+    //     cursor: pointer;
+    // }
+
+    // .hamburger-open .line {
+    //     background: $codGray;
+    // }
 
     .mobile__menu-list {
         width: 100%;
