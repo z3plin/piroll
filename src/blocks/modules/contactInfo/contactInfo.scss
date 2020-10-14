@@ -1,0 +1,80 @@
+.contactInfo {
+    background-color: $wildSand;
+
+    &__wrapper {
+        @extend .max-width;
+        @extend .flex;
+        align-items: stretch;
+        padding-top: rem(150);
+        padding-bottom: rem(50);
+
+        
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+        }
+    }
+
+    &__map {
+        @extend .max-width;
+        width: 100%;
+        padding-bottom: rem(50);
+
+        @media screen and (max-width: 768px) {
+            padding-right: rem(30)!important;
+            padding-left: rem(30)!important;
+        }
+    }
+}
+
+.contacts {
+    width: calc(100% / 12 * 5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: rem(18);
+
+    @media screen and (max-width: 768px) {
+        width: calc(100% / 12 * 12);
+        margin-bottom: rem(30);
+        padding-left: rem(15);
+        padding-right: rem(15);
+        font-size: rem(16);
+        text-align: left;
+    }
+
+    .contact__title {
+        text-align: left;
+    }
+
+    .contact__address,
+    .contact__phone,
+    .contact__mail {
+        margin-bottom: rem(10);
+        font-style: normal;
+        color: $boulder;
+        transition: .2s all;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            color: $java;
+        }
+
+        &:active {
+            color: darken($color: $java, $amount: 25%);
+        }
+    }
+
+    .contact__fax {
+        color: $boulder;
+
+        &:hover,
+        &:focus {
+            color: $java;
+        }
+
+        &:active {
+            color: darken($color: $java, $amount: 25%);
+        }
+    }
+}

@@ -10,6 +10,33 @@
         }
     }
 
+    &__contactWrapper {
+        width: calc(100% / 12 * 7);
+
+        @media screen and (max-width:768px) {
+            width: calc(100% / 12 * 12);
+        }
+        
+        .orderForm__wrapper {
+            padding: 0;
+
+            .order__form {
+                width: 100%;
+                margin: 0;
+            }
+    
+            @media screen and (max-width: 768px) {
+                width: calc(100% / 12 * 12);
+    
+                .order__form {
+                    width: 100%;
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
     &__title,
     &__text {
         text-align: center;

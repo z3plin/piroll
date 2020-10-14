@@ -91,6 +91,10 @@ svg {
     margin-left: rem(20);
 }
 
+.p-0 {
+  padding: 0!important;
+}
+
 .title {
     font-family: "Montserrat-Medium";
     font-size: rem(38);
@@ -123,6 +127,7 @@ svg {
 }
 
 .bold {
+  margin-right: rem(10);
   font-weight: 700;
   color: $codGray;
 }
