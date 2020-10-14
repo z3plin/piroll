@@ -1,0 +1,37 @@
+.pagination {
+    padding: rem(40) 0;
+
+    &__wrapper {
+        @extend .max-width;
+        @extend .flex;
+        padding-left: rem(-40);
+        padding-right: rem(-40);
+
+        .pagination {
+
+            &__prev,
+            &__all,
+            &__next {
+                font-size: rem(14);
+                color: $codGray;
+                text-transform: uppercase;
+                letter-spacing: 1.2px;
+                transition: .2s all;
+
+                @media screen and (max-width: 768px) {
+                    font-size: rem(12);
+                }
+
+                &:hover,
+                &:focus {
+                    color: $java;
+                }
+
+                &:active {
+                    color: darken($color: $java, $amount: 25%);
+                }
+            }
+
+        }
+    }
+}
